@@ -6,3 +6,4 @@
 ## RequiredDeps: Blizzard_PVPUI, Blizzard_InspectUI, Blizzard_PVPMatch
 
 core.lua
+bgframe.lua

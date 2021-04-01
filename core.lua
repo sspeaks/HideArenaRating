@@ -25,12 +25,11 @@ local hideTier = function()
     PVPQueueFrame.HonorInset.RatedPanel.Tier:Hide()
 end
 
--- local hideTabContainer = function() 
---     PVPMatchResults.content.tabContainer:Hide()
---     PVPMatchResults.content.earningsContainer:Hide()
---     PVPMatchResults.content.scrollFrame.ScrollChild:Hide()
+local hideTabContainer = function() 
+    PVPMatchResults.content.tabContainer:Hide()
+    PVPMatchResults.content.earningsContainer:Hide()
    
--- end
+end
 
 -- local testRowUpdateStuff = function()
 --     local rows = PVPMatchResults["tableBuilder"]:GetRows()
@@ -56,16 +55,16 @@ local function OnEvent(self, event, isLogin, isReload)
         ConquestFrame.Arena2v2:HookScript("OnEnter", hideTooltip);
         ConquestFrame.Arena3v3:HookScript("OnEnter", hideTooltip);
         ConquestFrame.RatedBG:HookScript("OnEnter", hideTooltip);
-        -- PVPMatchResults:HookScript("OnShow", hideTabContainer);
+        PVPMatchResults:HookScript("OnShow", hideTabContainer);
         -- hooksecurefunc(PVPMatchResults, "OnUpdate", testRowUpdateStuff)
-        local oldOptional = PVPMatchUtil.GetOptionalCategories
-        PVPMatchUtil.GetOptionalCategories = function()
-            local categories = oldOptional()
-            categories.ratingChange = false;
-            categories.ratingPost = false;
-            categories.ratingPre = false;
-            return categories
-        end
+        -- local oldOptional = PVPMatchUtil.GetOptionalCategories
+        -- PVPMatchUtil.GetOptionalCategories = function()
+        --     local categories = oldOptional()
+        --     categories.ratingChange = false;
+        --     categories.ratingPost = false;
+        --     categories.ratingPre = false;
+        --     return categories
+        -- end
     end 
 end
 local f = CreateFrame("Frame")
