@@ -1,0 +1,8 @@
+## Interface: 90005
+## Title: Hide Arena Rating
+## Notes: Hides arena rating from all windows so you dont rage
+## Author: Seth Speaks (Daisycat-Mal'Ganis)
+## Version: 0.0.1
+## RequiredDeps: Blizzard_PVPUI, Blizzard_InspectUI, Blizzard_PVPMatch
+
+core.lua
