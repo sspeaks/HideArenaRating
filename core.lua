@@ -48,7 +48,8 @@ end
 
 local function OnEvent(self, event, isLogin, isReload)
 	if isLogin or isReload then
-        
+        PVPQueueFrame_SetCategoryButtonState(PVPQueueFrameCategoryButton2, true)
+        PVPQueueFrame_SetCategoryButtonState(PVPQueueFrameCategoryButton3, true)
         hooksecurefunc("ConquestFrame_Update", updateMe);
         hooksecurefunc(PVPQueueFrame.HonorInset.RatedPanel, "Show", hideTier);
         hooksecurefunc("InspectPVPFrame_Update", hideInspectedRating)
